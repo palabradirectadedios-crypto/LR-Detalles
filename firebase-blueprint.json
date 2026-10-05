@@ -1,0 +1,170 @@
+{
+  "entities": {
+    "Category": {
+      "title": "Category",
+      "description": "Catalog category for grouping products (e.g., Flores Eternas, Limpiapipas, Anchetas)",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the category"
+        },
+        "name": {
+          "type": "string",
+          "description": "Category display name",
+          "maxLength": 100
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly slug for the category",
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "Short description of the category",
+          "maxLength": 500
+        },
+        "iconName": {
+          "type": "string",
+          "description": "Icon identifier name from Lucide icon set",
+          "maxLength": 50
+        },
+        "order": {
+          "type": "number",
+          "description": "Sorting order priority"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of creation"
+        }
+      },
+      "required": ["id", "name", "slug"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Product item in the catalog (floral arrangement, ancheta, gift box)",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the product"
+        },
+        "title": {
+          "type": "string",
+          "description": "Product title or name",
+          "maxLength": 200
+        },
+        "categoryId": {
+          "type": "string",
+          "description": "Foreign key reference to Category id",
+          "maxLength": 100
+        },
+        "suggestedPrice": {
+          "type": "number",
+          "description": "Suggested retail price in COP"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of product features and inclusions",
+          "maxLength": 2000
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Image URL or data URI of the product"
+        },
+        "availability": {
+          "type": "string",
+          "description": "Stock status",
+          "enum": ["disponible", "encargo", "agotado"]
+        },
+        "isFeatured": {
+          "type": "boolean",
+          "description": "Whether the product is highlighted on the home showcase"
+        },
+        "leadTimeHours": {
+          "type": "number",
+          "description": "Lead time in hours for made-to-order items"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of creation"
+        }
+      },
+      "required": ["id", "title", "categoryId", "suggestedPrice", "availability"]
+    },
+    "StoreSettings": {
+      "title": "StoreSettings",
+      "description": "Global store configuration and contact details",
+      "type": "object",
+      "properties": {
+        "storeName": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "tagline": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "whatsappNumber": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "instagramUsername": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "instagramUrl": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "logoUrl": {
+          "type": "string"
+        },
+        "currencySymbol": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "currencyCode": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "deliveryCoverage": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "customGreetingMessage": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "adminPin": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "flowerPricesImageUrl": {
+          "type": "string"
+        }
+      },
+      "required": ["storeName", "whatsappNumber"]
+    }
+  },
+  "firestore": {
+    "/categories/{categoryId}": {
+      "schema": {
+        "$ref": "#/entities/Category"
+      },
+      "description": "Catalog categories available to all visitors"
+    },
+    "/products/{productId}": {
+      "schema": {
+        "$ref": "#/entities/Product"
+      },
+      "description": "Catalog products available to all visitors"
+    },
+    "/settings/{settingId}": {
+      "schema": {
+        "$ref": "#/entities/StoreSettings"
+      },
+      "description": "Global store settings"
+    }
+  }
+}

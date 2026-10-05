@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD9E8" />
+      <stop offset="100%" stop-color="#FFC2D8" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#DB2777" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="700" fill="url(#bgGrad)" />
+
+  <!-- Heart Background Graphic 1 -->
+  <path d="M 120 100 C 60 40, -20 120, 40 220 C 90 300, 200 420, 250 480 C 260 430, 260 300, 230 220 C 200 140, 160 100, 120 100 Z" fill="#FFEBF3" opacity="0.8" />
+  <!-- Heart Background Graphic 2 -->
+  <path d="M 400 320 C 460 260, 520 340, 470 430 C 420 520, 310 620, 240 680 C 260 620, 290 520, 330 440 C 360 370, 380 330, 400 320 Z" fill="#FFE3EE" opacity="0.85" />
+
+  <!-- Top Wavy Line Accent -->
+  <path d="M 280 8 C 330 50, 420 60, 480 80" fill="none" stroke="#F43F5E" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Bottom Wavy Line Accent -->
+  <path d="M 30 610 C 100 630, 160 600, 230 690" fill="none" stroke="#F43F5E" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Main Title -->
+  <text x="250" y="135" font-family="'Arial Rounded MT Bold', 'Montserrat', 'Poppins', sans-serif" font-weight="900" font-style="italic" font-size="38" fill="#E11D48" text-anchor="middle" letter-spacing="2" filter="url(#shadow)">
+    FLORES ETERNAS
+  </text>
+
+  <!-- Price Rows -->
+  <g font-family="'Arial Rounded MT Bold', 'Montserrat', 'Poppins', sans-serif" font-weight="800" font-style="italic" font-size="20" fill="#E11D48" letter-spacing="1">
+    <!-- 1 -->
+    <text x="145" y="200" text-anchor="start">1 ROSA</text>
+    <text x="355" y="200" text-anchor="end">15.000</text>
+
+    <!-- 2 -->
+    <text x="145" y="232" text-anchor="start">2 ROSAS</text>
+    <text x="355" y="232" text-anchor="end">20.000</text>
+
+    <!-- 3 -->
+    <text x="145" y="264" text-anchor="start">3 ROSAS</text>
+    <text x="355" y="264" text-anchor="end">25.000</text>
+
+    <!-- 4 -->
+    <text x="145" y="296" text-anchor="start">4 ROSAS</text>
+    <text x="355" y="296" text-anchor="end">30.000</text>
+
+    <!-- 5 -->
+    <text x="145" y="328" text-anchor="start">5 ROSAS</text>
+    <text x="355" y="328" text-anchor="end">35.000</text>
+
+    <!-- 6 -->
+    <text x="145" y="360" text-anchor="start">6 ROSAS</text>
+    <text x="355" y="360" text-anchor="end">40.000</text>
+
+    <!-- 7 -->
+    <text x="145" y="392" text-anchor="start">7 ROSAS</text>
+    <text x="355" y="392" text-anchor="end">45.000</text>
+
+    <!-- 8 -->
+    <text x="145" y="424" text-anchor="start">8 ROSAS</text>
+    <text x="355" y="424" text-anchor="end">50.000</text>
+
+    <!-- 9 -->
+    <text x="145" y="456" text-anchor="start">9 ROSAS</text>
+    <text x="355" y="456" text-anchor="end">55.000</text>
+
+    <!-- 10 -->
+    <text x="145" y="488" text-anchor="start">10 ROSAS</text>
+    <text x="355" y="488" text-anchor="end">60.000</text>
+
+    <!-- 11 -->
+    <text x="145" y="520" text-anchor="start">11 ROSAS</text>
+    <text x="355" y="520" text-anchor="end">65.000</text>
+
+    <!-- 12 -->
+    <text x="145" y="552" text-anchor="start">12 ROSAS</text>
+    <text x="355" y="552" text-anchor="end">70.000</text>
+
+    <!-- 13 -->
+    <text x="145" y="584" text-anchor="start">13 ROSAS</text>
+    <text x="355" y="584" text-anchor="end">75.000</text>
+
+    <!-- 14 -->
+    <text x="145" y="616" text-anchor="start">14 ROSAS</text>
+    <text x="355" y="616" text-anchor="end">80.000</text>
+
+    <!-- 15 -->
+    <text x="145" y="648" text-anchor="start">15 ROSAS</text>
+    <text x="355" y="648" text-anchor="end">85.000</text>
+  </g>
+</svg>
